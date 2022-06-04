@@ -1,0 +1,159 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: helvetica;
+}
+
+body {
+    background-image: linear-gradient(360deg, rgba(5, 10, 5, 0.80), rgba(90, 40, 90, 0.80)), url(../bg-image.jpg);
+    background-size: cover;
+    /*cover hace que tomo el total de la pantalla
+    y el contain es el tamaño real de la imagen*/
+    background-attachment: fixed;
+    /*fondo de archivo: fijo;*/
+}
+
+
+/*todos funcionan como contenedores*/
+
+.container {
+    /*el contenedor si o si tiene que ir sino el cuadrado se desarmaria*/
+    margin: 40px auto;
+    /*arriba y abajo de 40px y un auto para que se centre en el centro de la pagina*/
+    width: 600px;
+    min-height: 50px;
+    /*todos tienen 50 asi se oculta uno bajo el otro*/
+    background-color: red;
+    /*se puede sacar*/
+    /*overflow: hidden;*/
+    border-radius: 5px;
+}
+
+.subapartado {
+    width: 600px;
+    min-height: 50px;
+    background-color: green;
+}
+
+.titulo {
+    width: 600px;
+    height: 50px;
+    display: flex;
+    background-color: #24c06f;
+    overflow: hidden;
+    /*es para evitar que este blocke desborde de su caja padre que seria el container,
+    se desborda por el margin de p.titulo*/
+    border-bottom: 1px solid #39f58f;
+}
+
+p.titulo {
+    margin: 13px;
+    color: #fff;
+}
+
+p.detalle {
+    color: #fff;
+    font-size: larger;
+}
+
+.info {
+    width: 600px;
+    height: 0px;
+    /*al poner 0 hace el efecto que se esconde*/
+    background-color: #f5f5f5;
+    overflow: hidden;
+    /*-webkit-transition: .2s; seria lo mismo transition: .2s;*/
+    transition: .2s;
+}
+
+p.info {
+    display: flex;
+    margin: 20px;
+    text-align: left;
+    color: #4f4f4f;
+}
+
+.subapartado:hover .info {
+    height: 180px;
+}
+
+
+/*barra de navegacion*/
+
+.container-nav {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 130px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: Roboto, "sans-serif";
+    font-size: 1.2rem;
+}
+
+.navbar ul li::before {
+    content: "";
+    height: 3px;
+    width: 0%;
+    background: yellowgreen;
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    transition: 0.4s ease-out;
+}
+
+.navbar ul li:hover::before {
+    width: 100%;
+}
+
+
+/*FIN MENU*/
+
+
+/*tabla*/
+
+.tabla {
+    border-collapse: collapse;
+    border-color: #404040;
+}
+
+.tabla th {
+    /*titulos*/
+    border: 1px solid black;
+    padding: 5px;
+    background-color: #006266;
+    color: white;
+}
+
+.tabla td {
+    border-bottom: 1px solid black;
+    border-right: 1px solid rgba(0, 0, 0, 0.637);
+    padding: 5px;
+    background-color: #bcefd2;
+}
+
+
+/*FIN TABLA*/
